@@ -49,7 +49,7 @@
 
         <property name="snippet_services" type="snippet">
             <meta>
-                <title lang="en">snippets services</title>
+                <title lang="en">Snippet services</title>
             </meta>
 
             <!--<params>
@@ -57,15 +57,15 @@
             </params>-->
         </property>
 
-        <!--<property name="snippet_contact" type="snippet">
+        <property name="snippet_contact" type="snippet">
             <meta>
-                <title lang="en">snippets contact</title>
+                <title lang="en">Snippet contact</title>
             </meta>
 
             <params>
                 <param name="snippet_2_1" value="snippet_2_1"/>
             </params>
-        </property>-->
+        </property>
     </properties>
 
     <properties>
