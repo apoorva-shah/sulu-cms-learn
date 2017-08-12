@@ -46,6 +46,26 @@
                 <title lang="de">Artikel</title>
             </meta>
         </property>
+
+        <property name="snippet_services" type="snippet">
+            <meta>
+                <title lang="en">snippets services</title>
+            </meta>
+
+            <!--<params>
+                <param name="snippet_1_1" value="snippet_1_1"/>
+            </params>-->
+        </property>
+
+        <!--<property name="snippet_contact" type="snippet">
+            <meta>
+                <title lang="en">snippets contact</title>
+            </meta>
+
+            <params>
+                <param name="snippet_2_1" value="snippet_2_1"/>
+            </params>
+        </property>-->
     </properties>
 
     <properties>
