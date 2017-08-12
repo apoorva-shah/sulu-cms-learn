@@ -1,0 +1,39 @@
+{% extends "master.html.twig" %}
+
+{% block meta %}
+    {% include "SuluWebsiteBundle:Extension:seo.html.twig" with {
+        "seo": extension.seo|default([]),
+        "content": content|default([]),
+        "urls": urls|default([]),
+        "shadowBaseLocale": shadowBaseLocale|default(),
+        "defaultLocale": request.defaultLocale|default('de')
+    } %}
+{% endblock %}
+
+{% block content %}
+    <h1 property="title">{{ content.title }}</h1>
+
+    <div property="article">
+        APOORVA one page{{ content.article|raw }}
+    </div>
+
+
+    {{ dd(content.blocks) }}
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% for block in content.blocks %}
+                <p>
+                    Title: {{ block.article|raw }}
+                </p>
+                <p>
+                    Images:
+                </p>
+                {% for image in block.images %}
+                    <img src="{{ image.url }}" class="img-responsive" style="max-height: 200px">
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
