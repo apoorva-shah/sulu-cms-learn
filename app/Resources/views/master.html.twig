@@ -26,6 +26,16 @@
             {% endblock %}
         </header>
 
+
+        <div>
+            {% for locale, url in urls %}
+                {% set extra="/"~request.locale %}
+
+                <a href="{{ sulu_content_path((url|replace({(extra): ""})?:'/'),request.webspaceKey,locale) }}">{{ locale }}</a>
+                {% if not loop.last %}&nbsp;|&nbsp;{% endif %}
+            {% endfor %}
+        </div>
+
         <form action="{{ path('sulu_search.website_search') }}" method="GET">
             <input name="q" type="text" placeholder="Search" />
             <input type="submit" value="Go" />

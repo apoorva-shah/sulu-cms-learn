@@ -74,6 +74,9 @@ abstract class AbstractKernel extends SuluKernel
             new Massive\Bundle\BuildBundle\MassiveBuildBundle(),
         ];
 
+
+        /*var_dump($this->getEnvironment());
+        exit;*/
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {
             // symfony standard
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
