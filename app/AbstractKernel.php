@@ -72,6 +72,7 @@ abstract class AbstractKernel extends SuluKernel
 
             // tools
             new Massive\Bundle\BuildBundle\MassiveBuildBundle(),
+            new \Example\NewsBundle\ExampleNewsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {
@@ -84,6 +85,7 @@ abstract class AbstractKernel extends SuluKernel
             // debug enhancement
             $bundles[] = new Sulu\Bundle\TestBundle\SuluTestBundle();
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
+
         }
 
         return $bundles;
